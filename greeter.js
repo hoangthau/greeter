@@ -32,21 +32,21 @@
 				return formalGreet[this.language] + ' ' + this.getFullName();
 			}
 			return this;
-        },
-        log: function(formal) {
-            if(formal) {
-                console.log(this.formalGreet());
-            } else {
-                console.log(this.greet());
-            }
-            return this;            
-        },
-        setGreetHTML: function(DOMElement) {
-            if(!DOMElement) {
-                throw 'Not found element to set greeting';
-            }
-            DOMElement.innerHTML = this.formalGreet();
-        }
+		},
+		log: function(formal) {
+			if (formal) {
+				console.log(this.formalGreet());
+			} else {
+				console.log(this.greet());
+			}
+			return this;
+		},
+		setGreetHTML: function(DOMElement) {
+			if (!DOMElement) {
+				throw 'Not found element to set greeting';
+			}
+			DOMElement.innerHTML = this.formalGreet();
+		}
 	};
 
 	Greeter.init = function(firstName, lastName, language) {
